@@ -10,14 +10,14 @@
     grid-template-rows:
       [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px)
       [line-s] 2px [line-e login-s] 38px [login-e];
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 .sign-in-form {
-    & > * {
-        grid-column: 1/-1;
-    }
+  & > * {
+    grid-column: 1/-1;
+  }
   &__email {
     grid-row: email-s/email-e;
   }
@@ -37,5 +37,5 @@
     grid-row: 1/-1;
     justify-self: end;
     align-self: start;
-}
+  }
 }
