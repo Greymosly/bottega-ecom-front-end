@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-class PurhcaseHistory extends Component {
+class PurchaseHistory extends Component {
     render() {
-        <div>
-            purhcase history 
-        </div>
+        return (
+            <div>
+                purchase history
+            </div>
+        )
     }
 }
 
-export default PurhcaseHistory;
+export default PurchaseHistory;

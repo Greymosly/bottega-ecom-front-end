@@ -11,7 +11,7 @@ class Navbar extends Component {
             <a
               className={`navbar__link ${link.active ? "green-text" : ""}`}
               key={index}
-              onClick={() => console.log("trying to sswitch tab")}
+              onClick={() => console.log("trying to switch tab")}
             >
               {link.title}
             </a>
