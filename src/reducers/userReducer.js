@@ -2,7 +2,17 @@ import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "../actions/types";
 
 const INITIAL_STATE = {
   purchases: [],
-  purchaseDetail: {},
+  purchaseDetail: {
+    user: {
+      _id: -1,
+      total: 0,
+      orderNumber: "",
+      orderDate: null,
+      creditCard: "",
+      name: "",
+      shippingAddress: "",
+    },
+  },
 };
 
 export default function (state = INITIAL_STATE, action) {
