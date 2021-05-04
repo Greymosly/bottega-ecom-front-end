@@ -17,13 +17,19 @@ body {
 
 @import "./layout.scss";
 @import "./headernavbar.scss";
-@import "./auth/signin.scss";
-@import "./auth/signup.scss";
-
 @import "./page-title.scss";
 @import "./form-fields.scss";
 @import './details.scss';
 
+// AUTH
+@import "./auth/signin.scss";
+@import "./auth/signup.scss";
+
+
+// ACOUNT
 @import './account/account.scss';
 @import './account/account-information.scss';
 @import './account/purchase-history.scss';
+
+// SHOP
+@import './shop/shop.scss';
