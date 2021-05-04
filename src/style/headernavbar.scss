@@ -56,4 +56,8 @@
   & > * {
     grid-row: s/e;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
