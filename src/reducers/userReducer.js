@@ -1,6 +1,11 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "../actions/types";
+import {
+  SET_USER_PURCHASES,
+  SET_PURCHASE_DETAIL,
+  SET_CART_PRODUCTS,
+} from "../actions/types";
 
 const INITIAL_STATE = {
+  cartProducts: [],
   purchases: [],
   purchaseDetail: {
     user: {
@@ -17,6 +22,11 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
+    case SET_CART_PRODUCTS:
+      return {
+        ...state,
+        cartProducts: action.payload
+      };
     case SET_USER_PURCHASES:
       return {
         ...state,
@@ -25,7 +35,7 @@ export default function (state = INITIAL_STATE, action) {
     case SET_PURCHASE_DETAIL:
       let purchaseDetail;
       state.purchases.map((purchase) => {
-        if ((purchase._id == action.payload)) {
+        if (purchase._id == action.payload) {
           purchaseDetail = purchase;
         }
       });
