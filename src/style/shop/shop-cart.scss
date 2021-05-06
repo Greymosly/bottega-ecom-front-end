@@ -67,7 +67,7 @@
     grid-column: s/e;
     grid-row: products-s/products-e;
     display: grid;
-    overflow-y: scroll;
+    overflow-y: auto;
     grid-row-gap: 45px;
   }
   &__footer {
