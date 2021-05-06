@@ -4,10 +4,9 @@ import CartProduct from "./cartProduct";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
-import CartButton from './cartButton';
+import CartButton from "./cartButton";
 
-import history from '../../history';
-
+import history from "../../history";
 
 function CartContent({ className, products }) {
   let count = products.length;
@@ -24,12 +23,20 @@ function CartContent({ className, products }) {
 }
 
 function CartFooter({ className, products }) {
-  const price = 7.96;
+  let subtotal = 0;
+  products.map((cartProdut) => {
+    subtotal += cartProdut.quantity * cartProdut.product.price;
+  });
   return (
     <div className={`${className} cart-footer`}>
-      <a onClick={() => history.push('/order/review')} className="cart-footer__checkout">Checkout</a>
+      <a
+        onClick={() => history.push("/order/review")}
+        className="cart-footer__checkout"
+      >
+        Checkout
+      </a>
       <div className="cart-footer__subtotal">Subtotal</div>
-      <div className="cart-footer__price">${price}</div>
+      <div className="cart-footer__price">${subtotal}</div>
     </div>
   );
 }
@@ -40,18 +47,24 @@ class ShopCart extends Component {
   }
 
   handleAddToCart = () => {
-    if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
-      document.getElementById('shop-cart').classList.remove('cart-hidden');
+    if (
+      document.getElementById("shop-cart").classList.contains("cart-hidden")
+    ) {
+      document.getElementById("shop-cart").classList.remove("cart-hidden");
     } else {
-      document.getElementById('shop-cart').classList.add('cart-hidden');
+      document.getElementById("shop-cart").classList.add("cart-hidden");
     }
-  }
+  };
 
   render() {
     const { className } = this.props;
     return (
       <div id="shop-cart" className={`${className} shop-cart cart-hidden`}>
-        <CartButton className="shop-cart__toggle" icon="fas fa-times" onClick={this.handleAddToCart}/>
+        <CartButton
+          className="shop-cart__toggle"
+          icon="fas fa-times"
+          onClick={this.handleAddToCart}
+        />
         <CartContent
           className="shop-cart__content"
           products={this.props.cartProducts}
