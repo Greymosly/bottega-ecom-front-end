@@ -7,6 +7,8 @@ import { FormButton } from "../formFields";
 
 import history from "../../history";
 
+import OrderSummary from './orderSummary';
+
 class ShippingForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
@@ -71,6 +73,7 @@ class ShippingForm extends Component {
           short={true}
           component={FormButton}
         />
+        <OrderSummary className='shipping-form__summary' />
       </form>
     );
   }
