@@ -25,7 +25,6 @@ body {
 @import "./auth/signin.scss";
 @import "./auth/signup.scss";
 
-
 // ACOUNT
 @import './account/account.scss';
 @import './account/account-information.scss';
@@ -43,3 +42,6 @@ body {
 // QUANTITY
 @import './quantity.scss';
 @import './green-price-tag.scss';
+
+// REVIEW
+@import './order/review.scss';
