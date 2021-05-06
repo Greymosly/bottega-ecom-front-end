@@ -51,7 +51,7 @@ class ShippingForm extends Component {
           name="zipcode"
           type="zipcode"
           title="Zipcode"
-          placeholder="Zipdode"
+          placeholder="Zipcode"
           component={FormInput}
         />
 
