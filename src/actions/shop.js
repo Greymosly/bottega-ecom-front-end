@@ -3,14 +3,14 @@ import {
   SET_NAVBAR_LINKS,
   SET_SHOP_PRODUCTS,
   FILTER_PRODUCTS_WITH_CATEGORY_ID,
-  FILTER_PRODUCTS_WITH_QUERY
+  FILTER_PRODUCTS_WITH_QUERY,
 } from "./types";
 
 export function filterProductsWithQuery(fields) {
-  return ({
+  return {
     type: FILTER_PRODUCTS_WITH_QUERY,
-    payload: fields
-  })
+    payload: fields,
+  };
 }
 
 export function filterProductsWithCategoryId(_id) {
@@ -67,6 +67,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 1,
@@ -75,6 +76,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 6],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 2,
@@ -83,6 +85,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 1, 4],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 3,
@@ -91,6 +94,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 2],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 4,
@@ -99,6 +103,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 5,
@@ -107,6 +112,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 2],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 6,
@@ -115,6 +121,7 @@ export function fetchShopProducts() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
         price: 1.99,
         belongsTo: [0, 6],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
     ],
   };

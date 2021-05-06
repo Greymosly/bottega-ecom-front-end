@@ -32,6 +32,7 @@ export function fetchCartProducts() {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
           price: 1.99,
           belongsTo: [0, 1],
+          imageUrl: 'http://via.placeholder.com/80x80'
         },
         quantity: 2,
       },
@@ -44,6 +45,7 @@ export function fetchCartProducts() {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat ipsam quisquam esse hic libero, atque blanditiis eum dolore corrupti consequuntur, odit beatae eius, laborum eveniet explicabo delectus tenetur totam!",
           price: 1.99,
           belongsTo: [0, 6],
+          imageUrl: 'http://via.placeholder.com/80x80'
         },
         quantity: 1,
       },
