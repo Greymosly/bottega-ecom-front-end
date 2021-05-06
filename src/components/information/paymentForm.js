@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { reduxForm, Field } from "redux-form";
+import { connect } from 'react-redux';
 
 import { FormInput } from "../formFields";
 import { FormButton } from "../formFields";
@@ -72,9 +73,9 @@ class PaymentForm extends Component {
             className="shipping-info_title"
             title="Shipping To"
           />
-          <div className="shipping-info_name small-text">Jordan Hudgens</div>
+          <div className="shipping-info_name small-text">{this.props.name}</div>
           <div className="shipping-info_address small-text">
-            Address goes here
+            {this.props.address}
           </div>
         </div>
       </form>
@@ -85,5 +86,12 @@ class PaymentForm extends Component {
 PaymentForm = reduxForm({
   form: "PaymentForm",
 })(PaymentForm);
+
+function mapStateToProps(state) {
+  const { name, address} = state.user.user;
+  return { name, address }
+}
+
+PaymentForm = connect(mapStateToProps)(PaymentForm)
 
 export default PaymentForm;
